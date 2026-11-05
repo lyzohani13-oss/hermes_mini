@@ -1,0 +1,32 @@
+
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "hermes-mini",
+  "main": "src/index.js",
+  "compatibility_date": "2026-10-23",
+
+  "observability": {
+    "enabled": true
+  },
+
+  "upload_source_maps": true,
+
+  "d1_databases": [
+    {
+      "binding": "hermes_mini_db",
+      "database_name": "hermes-mini-db",
+      "database_id": "3b1cf277-8a58-4880-b48e-1a3c1038796a"
+    }
+  ],
+
+  "ai": {
+    "binding": "AI"
+  },
+
+  "triggers": {
+    "crons": [
+      "* * * * *",
+      "30 4 * * *"
+    ]
+  }
+}
